@@ -28,7 +28,7 @@ const Banner = () => {
             <div className="banner-content text-center">
               <img src={"/img/icon/fire.png"} alt="" />
               <h2 className="title">
-                Join Future of Algorithmic Ammar <span>Crypto</span> Trading
+                Join Future of Algorithmic Ammar Wasiq <span>Crypto</span> Trading
                 Strategies
               </h2>
             </div>
