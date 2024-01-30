@@ -21,7 +21,7 @@ const WhoWeAre = () => {
               <div className="section-title mb-30">
                 <span className="sub-title">Who we are</span>
                 <h2 className="title">
-                  The World’s <span>12st ICO</span> Platform That Offers Rewards
+                  The World’s <span>1211st ICO</span> Platform That Offers Rewards
                 </h2>
               </div>
               <p>
