@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Bigtech - ICO & Crypto Landing Page Template</title>
+        <title>Bigtech Ammar Aamir - ICO & Crypto Landing Page Template</title>
         <meta name="description" content="" />
       </Head>
 
