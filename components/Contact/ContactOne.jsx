@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ContactOneForm from "./ContactOneForm";
 import ContactOneInfoItem from "./ContactOneInfoItem";
 
@@ -31,6 +31,13 @@ const ContactOne = () => {
       ),
     },
   ];
+
+  useEffect(() => {
+    const handler = async () => (
+      console.log("Component has mounted")
+    )
+    handler();
+  })
 
   return (
     <section id="contact" className="contact-area pt-70 pb-110">

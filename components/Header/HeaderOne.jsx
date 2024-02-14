@@ -169,7 +169,7 @@ const HeaderOne = () => {
                       </li>
                       <li className={isActiveLink("#contact")}>
                         <Link
-                          href="#contact"
+                          href="/contact"
                           className={"section-link"}
                           onClick={() => handleClickScroll("contact")}
                         >
