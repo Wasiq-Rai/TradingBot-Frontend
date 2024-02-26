@@ -1,6 +1,8 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 
 const OrderForm = ({ buttonType }:{buttonType: string}) => {
+  const [range, setRange] = useState<string>("1000")
   const buttonColor = buttonType === 'Buy' ? 'bg-green-500' : 'bg-red-500';
   
   return (
@@ -18,7 +20,7 @@ const OrderForm = ({ buttonType }:{buttonType: string}) => {
       
 <div className="relative mb-10">
     <label htmlFor="labels-range-input" className="sr-only">USDT</label>
-    <input id="labels-range-input" type="range" value="1000" min="100" max="1500" className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"/>
+    <input id="labels-range-input" type="range" value={range} onChange={(e) => setRange(e.target.value)} min="100" max="1500" className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"/>
     <span className="text-sm text-gray-500 dark:text-gray-400 absolute start-0 -bottom-6">Min ($10)</span>
     <span className="text-sm text-gray-500 dark:text-gray-400 absolute start-1/3 -translate-x-1/2 rtl:translate-x-1/2 -bottom-6">$500</span>
     <span className="text-sm text-gray-500 dark:text-gray-400 absolute start-2/3 -translate-x-1/2 rtl:translate-x-1/2 -bottom-6">$1000</span>

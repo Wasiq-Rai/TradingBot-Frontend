@@ -1,88 +1,98 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const ChartArea = () => {
+    const [isMounted, setIsMounted] = useState(false);
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            const fetchData = async () => {
+                const ApexCharts = (await import('apexcharts')).default;
+    
+                const options = {
+                    chart: {
+                        height: "100%",
+                        maxWidth: "100%",
+                        type: "area",
+                        fontFamily: "Inter, sans-serif",
+                        dropShadow: {
+                            enabled: true,
+                        },
+                        toolbar: {
+                            show: true,
+                        },
+                    },
+                    tooltip: {
+                        enabled: true,
+                        x: {
+                            show: true,
+                        },
+                    },
+                    fill: {
+                        type: "gradient",
+                        gradient: {
+                            opacityFrom: 0.55,
+                            opacityTo: 0,
+                            shade: "#1C64F2",
+                            gradientToColors: ["#1C64F2"],
+                        },
+                    },
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    stroke: {
+                        width: 6,
+                    },
+                    grid: {
+                        show: true,
+                        strokeDashArray: 4,
+                        padding: {
+                            left: 2,
+                            right: 2,
+                            top: 0
+                        },
+                    },
+                    series: [
+                        {
+                            name: "New users",
+                            data: [6500, 6418, 6456, 6526, 6356, 6456],
+                            color: "#1A56DB",
+                        },
+                    ],
+                    xaxis: {
+                        categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
+                        labels: {
+                            show: false,
+                        },
+                        axisBorder: {
+                            show: true,
+                        },
+                        axisTicks: {
+                            show: true,
+                        },
+                    },
+                    yaxis: {
+                        show: true,
+                    },
+                };
+    
+                if (document.querySelector("#area-chart")) {
+                    const chart = new ApexCharts(document.querySelector('#area-chart'), options);
+                    console.log("Chart Rendered");
+                    chart.render();
+                }
+            };
+    
+            setIsMounted(true);
+            fetchData();
+        }, 2000)
+        return () => clearTimeout(timeout);
+      }, []);
     
     useEffect(() => {
-        const fetchData = async () => {
-            const ApexCharts = (await import('apexcharts')).default;
 
-            const options = {
-                chart: {
-                    height: "100%",
-                    maxWidth: "100%",
-                    type: "area",
-                    fontFamily: "Inter, sans-serif",
-                    dropShadow: {
-                        enabled: true,
-                    },
-                    toolbar: {
-                        show: true,
-                    },
-                },
-                tooltip: {
-                    enabled: true,
-                    x: {
-                        show: true,
-                    },
-                },
-                fill: {
-                    type: "gradient",
-                    gradient: {
-                        opacityFrom: 0.55,
-                        opacityTo: 0,
-                        shade: "#1C64F2",
-                        gradientToColors: ["#1C64F2"],
-                    },
-                },
-                dataLabels: {
-                    enabled: false,
-                },
-                stroke: {
-                    width: 6,
-                },
-                grid: {
-                    show: true,
-                    strokeDashArray: 4,
-                    padding: {
-                        left: 2,
-                        right: 2,
-                        top: 0
-                    },
-                },
-                series: [
-                    {
-                        name: "New users",
-                        data: [6500, 6418, 6456, 6526, 6356, 6456],
-                        color: "#1A56DB",
-                    },
-                ],
-                xaxis: {
-                    categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
-                    labels: {
-                        show: false,
-                    },
-                    axisBorder: {
-                        show: true,
-                    },
-                    axisTicks: {
-                        show: true,
-                    },
-                },
-                yaxis: {
-                    show: true,
-                },
-            };
+    },[]);
 
-            if (document.querySelector("#area-chart")) {
-                const chart = new ApexCharts(document.querySelector('#area-chart'), options);
-                console.log("Chart Rendered");
-                chart.render();
-            }
-        };
-
-        fetchData();
-    });
+    console.log(isMounted);
 
     return (
         <div className="w-full  rounded-lg shadow dark:bg-gray-800 p-4 md:p-6" >
@@ -101,7 +111,7 @@ const ChartArea = () => {
                     </svg>
                 </div>
             </div>
-            <div id="area-chart"></div>
+            {isMounted && <div suppressHydrationWarning suppressContentEditableWarning id="area-chart"></div>}
             <div className="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between">
                 <div className="flex justify-between items-center pt-5">
                     <button
