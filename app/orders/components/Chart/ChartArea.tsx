@@ -84,16 +84,11 @@ const ChartArea = () => {
     
             setIsMounted(true);
             fetchData();
-        }, 2000)
+            
+        }, 5000)
         return () => clearTimeout(timeout);
       }, []);
     
-    useEffect(() => {
-
-    },[]);
-
-    console.log(isMounted);
-
     return (
         <div className="w-full  rounded-lg shadow dark:bg-gray-800 p-4 md:p-6" >
             <div className="flex justify-between">
@@ -111,6 +106,7 @@ const ChartArea = () => {
                     </svg>
                 </div>
             </div>
+            {!isMounted && <div className='bg-slate-500 animate-pulse h-[350px] w-full'></div>}
             {isMounted && <div suppressHydrationWarning suppressContentEditableWarning id="area-chart"></div>}
             <div className="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between">
                 <div className="flex justify-between items-center pt-5">
