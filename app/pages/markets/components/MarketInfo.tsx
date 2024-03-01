@@ -1,6 +1,6 @@
 import React from 'react'
 import Duration from './Duration'
-import ChartArea from '@/app/orders/components/Chart/ChartArea'
+import ChartArea from '../../trade/components/Chart/ChartArea'
 import MarketChart from './MarketChart'
 import BuySellMarketChart from './BuySellMarketChart'
 import MarketPriceDetail from './MarketPriceDetail'
@@ -23,7 +23,7 @@ const MarketInfo = () => {
       {/* Bottom left */}
       <div>
         <h2 className="text-xl m-6 font-semibold">AAPL Inc. (AAPL)</h2>
-        <p className='m-6'>Apple Inc. (AAPL) holds a significant position in the NASDAQ stock exchange, being one of its most influential and actively traded stocks. Its market capitalization, often hovering among the highest in the world, contributes substantially to the overall valuation of the NASDAQ. As a technology giant with a global presence and a history of strong financial performance, Apple's stock price movements frequently impact the NASDAQ Composite Index, which comprises numerous tech-focused companies. AAPL's performance is closely watched by investors and analysts due to its market capitalization, trading volume, and its representation of broader trends within the technology sector. The company's success and innovations often set the tone for market expectations and can influence the overall sentiment and performance of the NASDAQ.</p>
+        <p className='m-6'>Apple Inc. (AAPL) holds a significant position in the NASDAQ stock exchange, being one of its most influential and actively traded stocks. Its market capitalization, often hovering among the highest in the world, contributes substantially to the overall valuation of the NASDAQ. As a technology giant with a global presence and a history of strong financial performance, Apple{"'"}s stock price movements frequently impact the NASDAQ Composite Index, which comprises numerous tech-focused companies. AAPL{"'"}s performance is closely watched by investors and analysts due to its market capitalization, trading volume, and its representation of broader trends within the technology sector. The company{"'"}s success and innovations often set the tone for market expectations and can influence the overall sentiment and performance of the NASDAQ.</p>
       </div>
     </div>
     {/* Right 1/3rd */}

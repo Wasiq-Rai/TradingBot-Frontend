@@ -20,7 +20,7 @@ const Header = () => {
                 <br />We Keep Trading<br />
               </h1>
               <h1 className="text-2xl p-6 font-bold leading-none tracking-tight text-gray-900  dark:text-white">
-              The industry's leading tool at a priiiice to suit everyone.
+              The industry{"'"}s leading tool at a priiiice to suit everyone.
               </h1>
               <h1 className="text-2xl my-10 p-6 font-bold leading-none tracking-tight text-gray-900  dark:text-white">
               <br />Select the Plan that Fits Your Trading Goals              </h1>
