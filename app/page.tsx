@@ -1,4 +1,4 @@
-import HomePage from "./pages/home_page/page";
+import HomePage from "./home_page/page";
 import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
