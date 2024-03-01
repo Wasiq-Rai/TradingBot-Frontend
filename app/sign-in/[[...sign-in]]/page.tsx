@@ -1,4 +1,3 @@
-import Banner from "@/app/home_page/Components/Banner";
 import { SignIn } from "@clerk/nextjs";
 
 export default function SignPage() {

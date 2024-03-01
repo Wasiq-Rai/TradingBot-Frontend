@@ -1,11 +1,11 @@
 import React from 'react'
-import Banner from '@/app/home_page/Components/Banner'
-import WhoWeAre from '@/app/home_page/Components/WhoWeAre'
-import WhyChooseUs from '@/app/home_page/Components/WhyChooseUs/WhyChooseUs'
-import Team from '@/app/home_page/Components/Team/Team'
-import NavBar from '../components/NavBar'
+import Banner from './Components/Banner'
+import WhoWeAre from './Components/WhoWeAre'
+import WhyChooseUs from './Components/WhyChooseUs/WhyChooseUs'
+import Team from './Components/Team/Team'
+import NavBar from '../../components/NavBar'
 import CommentSection from './Components/CommentSection'
-import Footer from '../components/Footer'
+import Footer from '../../components/Footer'
 
 const HomePage = () => {
   return (
