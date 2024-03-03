@@ -1,6 +1,5 @@
 import React from 'react'
 import Duration from './Duration'
-import ChartArea from '@/app/orders/components/Chart/ChartArea'
 import MarketChart from './MarketChart'
 import BuySellMarketChart from './BuySellMarketChart'
 import MarketPriceDetail from './MarketPriceDetail'
