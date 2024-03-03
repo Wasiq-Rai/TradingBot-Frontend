@@ -12,6 +12,7 @@
   "dependencies": {
     "@clerk/nextjs": "^4.29.7",
     "apexcharts": "^3.46.0",
+    "axios": "^1.6.7",
     "clerk": "^0.8.3",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.7.2",
