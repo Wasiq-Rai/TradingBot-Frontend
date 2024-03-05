@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -15,6 +16,22 @@ const Orders = () => {
       style={{ backgroundImage: "url('/img/banner/banner_bg.jpg')" }}
     >
       <NavBar />
+=======
+import React from 'react'
+import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
+import OrderForm from './components/OrderForms/Form'
+import StockPriceHeader from './components/OrdersStockPriceHeader'
+import OrderBook from './components/OrderBook'
+import TradeChart from './components/Chart/TradeChart'
+import OrderViewArea from './components/OrderView/OrderViewArea'
+import MarketActivities from './components/MarketActivities'
+
+const Orders = () => {
+  return (
+    <section className=" min-h-screen "style={{ backgroundImage: "url('/img/banner/banner_bg.jpg')" }}>
+      <NavBar/>
+>>>>>>> wasiq-branch
       {/* Main Section */}
       <div className="h-2/3 w-full flex">
         {/* Upper Section */}
